@@ -20,6 +20,10 @@ const VolunteerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  uploaded_links: {
+    type: [String],
+    default: []
+  }
 });
 
 
