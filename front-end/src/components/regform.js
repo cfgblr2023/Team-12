@@ -153,7 +153,7 @@ const Form = () => {
 				<input
 					type="text"
 					name="text"
-					value={formData.phoneNumber}
+					value={formData.text}
 					onChange={handleChange}
 				/>
 			</label>

@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Services from './components/Pages/Services';
 import Products from './components/Pages/Products';
 import SignUp from './components/Pages/SignUp';
+import VolunteerForm from './components/Pages/VolunteerForm';
+import Mentee from './components/Pages/Mentee';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route exact path='/services' element={<Services/>} />
           <Route exact path='/products' element={<Products/>} />
           <Route exact path='/sign-up' element={<SignUp/>} />
+          <Route exact path='/volunteer-form' element={<VolunteerForm/>} />
+          <Route exact path='/mentee' element={<Mentee/>} />
         </Routes>
       </Router>
     </>

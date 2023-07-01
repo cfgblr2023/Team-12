@@ -1,42 +1,23 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-	res.json({ message: 'get all mentees' })
-})
+const menteeController = require('../controllers/mentee.controller')
 
-router.get('/id/:id', (req, res) => {
-	const id = req.params.id
-	res.json({ message: `get mentee ${id}` })
-})
+router.get('/', menteeController.getAllMentees)
 
-router.get('/loc/:loc', (req, res) => {
-	const loc = req.params.loc
-	res.json({ message: `get mentees from ${loc}` })
-})
+router.get('/id/:id', menteeController.getMenteeById)
 
-router.get('/dash', (req, res) => {
-	res.json({ message: 'get mentee dash' })
-})
+router.get('/loc/:loc', menteeController.getMenteeByLoc)
 
-router.post('/', (req, res) => {
-	const body = req.body
-	res.json({ op: 'POST', body })
-})
+router.post('/', menteeController.createMentee)
 
 router.post('/login', (req, res) => {
 	const body = req.body
 	res.json({ op: 'LOGIN', body })
 })
 
-router.patch('/', (req, res) => {
-	const body = req.body
-	res.json({ op: 'PATCH', body })
-})
+router.patch('/:id', menteeController.updateMentee)
 
-router.delete('/:id', (req, res) => {
-	const id = req.params.id
-	res.json({ message: `delete mentee ${id}` })
-})
+router.delete('/:id', menteeController.deleteMentee)
 
 module.exports = router
