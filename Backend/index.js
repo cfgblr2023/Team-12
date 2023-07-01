@@ -16,6 +16,8 @@ app.get('/', (req, res) => {
 	res.json({ message: 'Hello world' })
 })
 
+require('./config/connectDB')()
+
 app.listen(PORT, () => {
 	console.log(`Running on http://localhost:${PORT}`)
 })

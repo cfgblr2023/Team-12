@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
 const VolunteerSchema = new mongoose.Schema({
+  phoneNo: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
   preference: {
     type: String,
     required: true
@@ -23,6 +31,10 @@ const VolunteerSchema = new mongoose.Schema({
   uploaded_links: {
     type: [String],
     default: []
+  },
+  locality: {
+    type: String,
+    required: true
   }
 });
 

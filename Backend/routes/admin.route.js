@@ -1,10 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-	res.json({ message: 'get all admin' })
-})
-
 router.get('/id/:id', (req, res) => {
 	const id = req.params.id
 	res.json({ message: `get admin ${id}` })
