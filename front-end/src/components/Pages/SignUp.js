@@ -1,21 +1,43 @@
 
-import React from 'react';
-import '../../App.css';
-// import Cards from '../Cards';
-// // import Footer from '../Footer';
-// import HeroSection from '../HeroSection';
-// import Footer from '../Footer';
+// import React from 'react';
+// import '../../App.css';
 
-// import Header from '../Header_regform'
-import Regform from '../regform'
+// function SignUp() {
+//   return (
+//     <>
+//       <br /><br /><br /><br />
+//       <h1>Login As:</h1>
+
+
+//     </>
+//   );
+// }
+
+// export default SignUp;
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../signupstyle.css'
+
 function SignUp() {
   return (
     <>
-      {/* <Header/> */}
-      <Regform />
+      <br /><br /><br /><br />
+      <h1>Login As:</h1>
+      <br /><br />
+      <center>
+      <Link to="/volunteer-form" className="big-button">
+        Volunteer
+      </Link>
 
+      <Link to="/mentee" className="big-button">
+        Mentee
+      </Link>
+      </center>
     </>
   );
 }
 
 export default SignUp;
+

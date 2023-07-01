@@ -393,7 +393,8 @@ function RegistrationForm() {
 
   return (
     <div className="container">
-      <h1>Registration Form</h1>
+      <br /><br />
+      <h1>Volunteer Registration Form</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="phoneNo">Phone No:</label>

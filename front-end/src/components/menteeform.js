@@ -6,6 +6,28 @@ function DropoutForm() {
   const [educationTill, setEducationTill] = useState('');
   const [interests, setInterests] = useState('');
   const [modeOfEducation, setModeOfEducation] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [location, setLocation] = useState('');
+
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+  
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+  
 
   const handleReasonChange = (e) => {
     setReason(e.target.value);
@@ -35,12 +57,57 @@ function DropoutForm() {
     setEducationTill('');
     setInterests('');
     setModeOfEducation('');
+    setPhoneNumber('');
+    setPassword('');
+    setName('');
+    setLocation('');
+
   };
 
   return (
     <div className="container">
-      <h1>Dropout Form</h1>
       <form onSubmit={handleSubmit}>
+      <div className="form-group">
+      <label htmlFor="phoneNumber">Phone Number:</label>
+      <input
+        type="text"
+        id="phoneNumber"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={handlePasswordChange}
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        onChange={handleNameChange}
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="location">Location:</label>
+      <select id="location" value={location} onChange={handleLocationChange}>
+        <option value="">Select Location</option>
+        <option value="north">North Bangalore</option>
+        <option value="south">South Bangalore</option>
+        <option value="east">East Bangalore</option>
+        <option value="west">West Bangalore</option>
+      </select>
+    </div>
+
         <div className="form-group">
           <label htmlFor="reason">Reason for Dropout:</label>
           <select

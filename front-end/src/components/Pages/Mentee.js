@@ -4,7 +4,7 @@ import MenteeForm from "../menteeform";
 const Mentee = () => {
     return ( 
         <div>
-        <h1>MENTEE</h1>
+        <h1>Mentee Dropout Form</h1>
         <MenteeForm/>
         </div>
      );
