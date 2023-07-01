@@ -7,6 +7,13 @@
     text-align: center;
   }
   
+  .about-h1{
+    font-size: 20px;
+    color: gray;
+    word-spacing: 15%;
+    margin: 5% 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
   .cards__container {
     display: flex;
     flex-flow: column;
@@ -23,6 +30,7 @@
   
   .cards__items {
     margin-bottom: 24px;
+    
   }
   
   .cards__item {
@@ -30,6 +38,7 @@
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
+    
   }
   
   .cards__item__link {

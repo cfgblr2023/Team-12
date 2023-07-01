@@ -31,7 +31,7 @@ function Navbar() {
 
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             LAMP FOUNDATION
-            <i class="fa-solid fa-heart"></i>
+            
           </Link>
 
           <div className='menu-icon' onClick={handleClick}>
@@ -51,7 +51,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                SERVICES
+                ABOUT
               </Link>
             </li>
             <li className='nav-item'>
@@ -61,6 +61,26 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 PROGRAMS
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/volunteer-form'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                VOLUNTEERS
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/mentee'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                MENTEE
               </Link>
             </li>
 

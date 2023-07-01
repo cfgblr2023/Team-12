@@ -28,8 +28,8 @@ const MenteeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  online: {
-    type: Boolean,
+  mode: {
+    type: String,
     required: true
   },
   mentor_alloted: {
