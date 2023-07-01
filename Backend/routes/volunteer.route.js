@@ -16,8 +16,4 @@ router.post('/login', (req, res) => {
 	res.json({ op: 'LOGIN', body })
 })
 
-router.patch('/:id', volunteerController.updateVolunteer)
-
-router.delete('/:id', volunteerController.deleteVolunteer)
-
 module.exports = router
