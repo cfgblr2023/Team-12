@@ -19,8 +19,8 @@ const getMenteeByLoc = asyncHandler(async (req, res) => {
 })
 
 const createMentee = asyncHandler(async (req, res) => {
-	const { phoneNo, password, name, location, education, reason, my_intrests, online } = req.body
-	const nVol = await Mentee.create({ phoneNo, password, name, location, education, reason, my_intrests, online })
+	const { phoneNo, password, name, location, education, reason, my_intrests, mode } = req.body
+	const nVol = await Mentee.create({ phoneNo, password, name, location, education, reason, my_intrests, mode })
 	res.json(nVol)
 })
 

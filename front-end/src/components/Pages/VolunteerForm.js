@@ -326,6 +326,7 @@
 
 import React, { useState } from 'react';
 import '../menteeform.css' // Import the CSS file for styling
+import axios from 'axios';
 
 function RegistrationForm() {
   const [phoneNo, setPhoneNo] = useState('');
@@ -369,17 +370,22 @@ function RegistrationForm() {
     setLocality(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Phone No:', phoneNo);
-    console.log('Password:', password);
-    console.log('Preference:', preference);
-    console.log('Week:', week);
-    console.log('Educational Qualification:', educationalQualification);
-    console.log('Aadhar No:', aadharNo);
-    console.log('Skills:', skills);
-    console.log('Locality:', locality);
+    const body = {
+      phoneNo,
+      password,
+      preference,
+      week,
+      educational_qualification: educationalQualification,
+      aadhar_no: aadharNo,
+      skills,
+      locality
+    }
+    console.log(body)
+    const response = await axios.post('http://localhost:5000/volunteer/', body);
+    console.log(response.data);
     // Reset form fields
     setPhoneNo('');
     setPassword('');

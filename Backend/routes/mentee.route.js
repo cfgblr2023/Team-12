@@ -16,8 +16,4 @@ router.post('/login', (req, res) => {
 	res.json({ op: 'LOGIN', body })
 })
 
-router.patch('/:id', menteeController.updateMentee)
-
-router.delete('/:id', menteeController.deleteMentee)
-
 module.exports = router
