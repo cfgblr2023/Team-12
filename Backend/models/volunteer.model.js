@@ -5,19 +5,19 @@ const VolunteerSchema = new mongoose.Schema({
     required: true
   },
   week: {
-    type: Date,
+    type: Number,
     required: true
   },
   educational_qualification: {
     type: String,
     required: true
   },
-   aadhar_no:{
-    type:Number,
+  aadhar_no: {
+    type: String,
     required: true
   },
-  skills:{
-    type:String,
+  skills: {
+    type: String,
     required: true
   },
 });
