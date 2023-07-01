@@ -26,6 +26,7 @@ const MenteeSchema = new mongoose.Schema({
   },
 });
 
+
 const MenteeModel = mongoose.model('Mentee', MenteeSchema);
 
 module.exports = MenteeModel;
