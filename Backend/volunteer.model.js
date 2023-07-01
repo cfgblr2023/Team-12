@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MenteeSchema = new mongoose.Schema({
+const VolunteerSchema = new mongoose.Schema({
   preference: {
     type: String,
     required: true
