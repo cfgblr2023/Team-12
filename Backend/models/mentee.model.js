@@ -12,18 +12,22 @@ const MenteeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  education:{
-    type:String,
+  education: {
+    type: String,
     required: true
   },
-  my_intrests:{
-    type:String,
+  my_intrests: {
+    type: String,
     required: true
   },
-  mode:{
+  mode: {
     type: Boolean,
     required: true
   },
+  mentor_alloted: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Volunteer'
+  }
 });
 
 
