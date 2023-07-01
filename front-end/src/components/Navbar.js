@@ -31,7 +31,7 @@ function Navbar() {
 
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             LAMP FOUNDATION
-            <i class="fa-solid fa-heart"></i>
+            
           </Link>
 
           <div className='menu-icon' onClick={handleClick}>
@@ -51,7 +51,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                SERVICES
+                ABOUT
               </Link>
             </li>
             <li className='nav-item'>
