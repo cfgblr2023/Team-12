@@ -6,7 +6,7 @@ import Donate from '../Donate';
 // import Cards from '../Cards';
 import Footer from '../Footer';
 // import HeroSection from '../HeroSection-2';
-import Lms from './LSM'
+import Lms from './LMS'
 // import Footer from '../Footer';
 
 function Products() {
