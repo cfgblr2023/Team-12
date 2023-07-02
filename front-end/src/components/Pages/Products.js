@@ -5,15 +5,16 @@ import Donate from '../Donate';
 
 // import Cards from '../Cards';
 import Footer from '../Footer';
-import HeroSection from '../HeroSection-2';
+// import HeroSection from '../HeroSection-2';
+import Lms from './LSM'
 // import Footer from '../Footer';
 
 function Products() {
   return (
     <>
-      
+      <Lms />
 
-      <HeroSection />
+      {/* <HeroSection /> */}
       <br /><br />
       <Donate />
       <br /><br /><br />
