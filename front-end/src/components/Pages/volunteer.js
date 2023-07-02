@@ -111,7 +111,7 @@ const DataList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('/api/data'); // Replace with your backend API endpoint
+      const response = await axios.get('localhost:5000/volunteer/id/64a09848c0f3c9949820f887'); // Replace with your backend API endpoint
       setData(response.data);
       console.log(response.data); // Log the data to the console
     } catch (error) {
