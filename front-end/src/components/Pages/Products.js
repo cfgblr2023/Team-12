@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../../App.css';
-import Donate from '/Users/tejasm/Desktop/jpmc/Team-12/front-end/src/Donate.js';
+import Donate from '../Donate';
 
 // import Cards from '../Cards';
 import Footer from '../Footer';
@@ -11,10 +11,13 @@ import HeroSection from '../HeroSection-2';
 function Products() {
   return (
     <>
-      <Donate />
+      
 
       <HeroSection />
-      <footer />
+      <br /><br />
+      <Donate />
+      <br /><br /><br />
+      <Footer />
     </>
   );
 }
