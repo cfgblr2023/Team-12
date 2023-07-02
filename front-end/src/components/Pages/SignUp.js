@@ -24,7 +24,7 @@ function SignUp() {
   return (
     <>
       <br /><br /><br /><br />
-      <h1>Login As:</h1>
+      <h1 className='signh1'>Login As:</h1>
       <br /><br />
       <center>
       <Link to="/volunteer-form" className="big-button">

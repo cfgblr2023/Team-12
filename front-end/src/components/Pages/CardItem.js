@@ -14,7 +14,7 @@ function CardItem(props) {
               src={props.src}
             />
           </figure>
-          <h1>Volunteer</h1>
+          <h1>{props.heading}</h1>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.text}</h5>
           </div>

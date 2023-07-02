@@ -69,7 +69,6 @@
 
 // export default VolunteerForm;
 
-
 //------------------------------------------------------------------------
 
 // import React, { useState } from 'react';
@@ -288,8 +287,6 @@
 //         </select>
 //       </div>
 
-      
-
 //       <div className="form-group">
 //         <label htmlFor="date">Date:</label>
 //         <input
@@ -323,20 +320,19 @@
 
 // export default VolunteerForm;
 
-
-import React, { useState } from 'react';
-import '../menteeform.css' // Import the CSS file for styling
-import axios from 'axios';
+import React, { useState } from "react";
+import "../menteeform.css"; // Import the CSS file for styling
+import axios from "axios";
 
 function RegistrationForm() {
-  const [phoneNo, setPhoneNo] = useState('');
-  const [password, setPassword] = useState('');
-  const [preference, setPreference] = useState('');
-  const [week, setWeek] = useState('');
-  const [educationalQualification, setEducationalQualification] = useState('');
-  const [aadharNo, setAadharNo] = useState('');
-  const [skills, setSkills] = useState('');
-  const [locality, setLocality] = useState('');
+  const [phoneNo, setPhoneNo] = useState("");
+  const [password, setPassword] = useState("");
+  const [preference, setPreference] = useState("");
+  const [week, setWeek] = useState("");
+  const [educationalQualification, setEducationalQualification] = useState("");
+  const [aadharNo, setAadharNo] = useState("");
+  const [skills, setSkills] = useState("");
+  const [locality, setLocality] = useState("");
 
   const handlePhoneNoChange = (e) => {
     setPhoneNo(e.target.value);
@@ -381,143 +377,186 @@ function RegistrationForm() {
       educational_qualification: educationalQualification,
       aadhar_no: aadharNo,
       skills,
-      locality
-    }
-    console.log(body)
-    const response = await axios.post('http://localhost:5000/volunteer/', body);
+      locality,
+    };
+    console.log(body);
+    const response = await axios.post("http://localhost:5000/volunteer/", body);
     console.log(response.data);
     // Reset form fields
-    setPhoneNo('');
-    setPassword('');
-    setPreference('');
-    setWeek('');
-    setEducationalQualification('');
-    setAadharNo('');
-    setSkills('');
-    setLocality('');
+    setPhoneNo("");
+    setPassword("");
+    setPreference("");
+    setWeek("");
+    setEducationalQualification("");
+    setAadharNo("");
+    setSkills("");
+    setLocality("");
   };
 
   return (
     <div className="container">
-      <br /><br />
+      <br />
+      <br />
       <h1>Volunteer Registration Form</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="phoneNo">Phone No:</label>
-          <input
-            type="text"
-            id="phoneNo"
-            value={phoneNo}
-            onChange={handlePhoneNoChange}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Preference:</label>
-          <div className="radio">
-            <label>
+        <table cellPadding={25} align="center">
+          <tr>
+            <td>
+              <label htmlFor="phoneNo">Phone No:</label>
+            </td>
+            <td>
               <input
-                type="radio"
-                value="online"
-                checked={preference === 'online'}
-                onChange={handlePreferenceChange}
+                className="inputvol"
+                type="text"
+                id="phoneNo"
+                value={phoneNo}
+                onChange={handlePhoneNoChange}
               />
-              <span>Online</span>
-            </label>
-          </div>
-          <div className="radio">
-            <label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label htmlFor="password">Password:</label>
+            </td>
+            <td>
               <input
-                type="radio"
-                value="offline"
-                checked={preference === 'offline'}
-                onChange={handlePreferenceChange}
+                className="inputvol"
+                type="password"
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
               />
-              <span>Offline</span>
-            </label>
-          </div>
-        </div>
+            </td>
+          </tr>
 
-        <div className="form-group">
-          <label htmlFor="week">Week:</label>
-          <select id="week" value={week} onChange={handleWeekChange}>
-            <option value="">Select Week</option>
-            <option value="0">Sunday</option>
-            <option value="1">Monday</option>
-            <option value="2">Tuesday</option>
-            <option value="3">Wednesday</option>
-            <option value="4">Thursday</option>
-            <option value="5">Friday</option>
-            <option value="6">Saturday</option>
-          </select>
-        </div>
+          <tr>
+            <td>
+              <label>Preference:</label>
+            </td>
+            <td colspan="2">
+              <label>
+                <input
+                  className="inputvol"
+                  type="radio"
+                  value="online"
+                  checked={preference === "online"}
+                  onChange={handlePreferenceChange}
+                />
+                <span>Online</span>
+              </label>
 
-        <div className="form-group">
-          <label htmlFor="educationalQualification">Educational Qualification:</label>
-          <input
-            type="text"
-            id="educationalQualification"
-            value={educationalQualification}
-            onChange={handleEducationalQualificationChange}
-          />
-        </div>
+              <label>
+                <input
+                  className="inputvol"
+                  type="radio"
+                  value="offline"
+                  checked={preference === "offline"}
+                  onChange={handlePreferenceChange}
+                />
+                <span>Offline</span>
+              </label>
+            </td>
+          </tr>
 
-        <div className="form-group">
-          <label htmlFor="aadharNo">Aadhar No:</label>
-          <input
-            type="text"
-            id="aadharNo"
-            value={aadharNo}
-            onChange={handleAadharNoChange}
-          />
-        </div>
+          <tr>
+            <td>
+              <label htmlFor="week">Week:</label>
+            </td>
+            <td>
+              <select id="week" value={week} onChange={handleWeekChange}>
+                <option value="">Select Week</option>
+                <option value="0">Sunday</option>
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+              </select>
+            </td>
+          </tr>
 
-        <div className="form-group">
-          <label htmlFor="skills">Skills:</label>
-          <select id="skills" value={skills} onChange={handleSkillsChange}>
-            <option value="">Select Skills</option>
-            <option value="tailoring">Tailoring</option>
-            <option value="handloom">Handloom</option>
-            <option value="technical">Technical</option>
-            <option value="arts">Arts</option>
-            <option value="commerce">Commerce</option>
-            <option value="others">Others</option>
-          </select>
-        </div>
+          <tr>
+            <td>
+              <label htmlFor="educationalQualification">
+                Educational Qualification:
+              </label>
+            </td>
+            <td>
+              <input
+                className="inputvol"
+                type="text"
+                id="educationalQualification"
+                value={educationalQualification}
+                onChange={handleEducationalQualificationChange}
+              />
+            </td>
+          </tr>
 
-        <div className="form-group">
-          <label htmlFor="locality">Locality:</label>
-          <select id="locality" value={locality} onChange={handleLocalityChange}>
-            <option value="">Select Locality</option>
-            <option value="north">North Bangalore</option>
-            <option value="south">South Bangalore</option>
-            <option value="east">East Bangalore</option>
-            <option value="west">West Bangalore</option>
-          </select>
-        </div>
+          <tr>
+            <td>
+              <label htmlFor="aadharNo">Aadhar No:</label>
+            </td>
+            <td>
+              <input
+                className="inputvol"
+                type="text"
+                id="aadharNo"
+                value={aadharNo}
+                onChange={handleAadharNoChange}
+              />
+            </td>
+          </tr>
 
-        <button type="submit">Submit</button>
+          <tr>
+            <td>
+              <label htmlFor="skills">Skills:</label>
+            </td>
+            <td>
+              <select id="skills" value={skills} onChange={handleSkillsChange}>
+                <option value="">Select Skills</option>
+                <option value="tailoring">Tailoring</option>
+                <option value="handloom">Handloom</option>
+                <option value="technical">Technical</option>
+                <option value="arts">Arts</option>
+                <option value="commerce">Commerce</option>
+                <option value="others">Others</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label htmlFor="locality">Locality:</label>
+            </td>
+            <td>
+              <select
+                id="locality"
+                value={locality}
+                onChange={handleLocalityChange}
+              >
+                <option value="">Select Locality</option>
+                <option value="north">North Bangalore</option>
+                <option value="south">South Bangalore</option>
+                <option value="east">East Bangalore</option>
+                <option value="west">West Bangalore</option>
+              </select>
+            </td>
+          </tr>
+        
+<tr>
+     <td></td>
+     <td>
+        <button className="btnSub" type="submit">
+          Submit
+          </button>
+          </td>
+          </tr>
+        </table>
       </form>
     </div>
   );
 }
 
 export default RegistrationForm;
-
-
-
-
-  
-      
-      
- 
