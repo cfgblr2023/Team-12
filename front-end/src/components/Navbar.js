@@ -4,11 +4,35 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+
+  const buttonStyle = {
+    padding: '16px 28px',
+    color: '#FFF4F4', // Updated font color to black
+    textDecoration: 'none',
+    borderRadius: '6px',
+    fontSize: '20px',
+    border: 'none',
+    transition: 'background-color 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center', // Center aligns the text horizontally
+  };
+
+
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  //const [click2,setClick2]=useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  //const closeMobMenu=()=>setClick2(false);
+
+  // const closeMobileMenu = () => {
+  //   if (window.location.pathname !== '/login') {
+  //     setClick(false);
+  //   }
+  // };
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -64,36 +88,9 @@ function Navbar() {
               </Link>
             </li>
 
-            {/* <li className='nav-item'>
-              <Link
-                to='/volunteer-form'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                VOLUNTEERS
-              </Link>
-            </li>
+            
 
-            <li className='nav-item'>
-              <Link
-                to='/mentee'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                MENTEE
-              </Link>
-            </li> */}
-
-            <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
-            <li>
+            {/* <li>
               <Link
                 to='/login'
                 className='nav-links-mobile'
@@ -101,10 +98,26 @@ function Navbar() {
               >
                 Login
               </Link>
-            </li>
+            </li> */}
+            <Link to="/login" style={buttonStyle}>LOGIN</Link>
+            <Link to="/sign-up" style={buttonStyle}>SIGN UP</Link>
+
+
+            {/* <li>
+              <Link
+                to='/sign-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Sign Up
+              </Link>
+            </li> */}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-          {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
+
+          
+          {/* {button && <Button buttonStyle='btn--outline'>LOGIN</Button>} */}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+          
         </div>
       </nav>
     </>

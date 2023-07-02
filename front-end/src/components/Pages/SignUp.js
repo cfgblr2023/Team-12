@@ -19,12 +19,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../signupstyle.css'
+import Footer from '../Footer';
 
 function SignUp() {
   return (
     <>
       <br /><br /><br /><br />
-      <h1>Login As:</h1>
+      <h1>Sign Up As:</h1>
       <br /><br />
       <center>
       <Link to="/volunteer-form" className="big-button">
@@ -35,6 +36,8 @@ function SignUp() {
         Mentee
       </Link>
       </center>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <Footer />
     </>
   );
 }
