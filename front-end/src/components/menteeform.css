@@ -1,15 +1,58 @@
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: -5% auto;
+    padding: 4%;
+    background-color: aliceblue;
+    padding-left: 110px;
   }
   
   .form-group {
     margin-bottom: 20px;
   }
+
+  ul li a:hover img{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+  }
+
+  table{
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  button :hover{
+    transform: scale(1.2);
+    background-color: #CCFFCC;
+  }
   
+button{
+  margin-top: 8%;
+}
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+  }
+
+  .column{
+    align-self: flex-end;
+  }
+ 
+
   label {
     display: block;
     font-weight: bold;
+    color: gray;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    size: 40px;
+    margin: 2%;
   }
   
   input[type='radio'],
@@ -24,5 +67,17 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: black;
+    align-self: center;
+    size: 10%;
   }
-  
+
+.inputvol{
+  font-weight: bold;
+  size: 40px;
+  color: gray;
+  box-shadow: inset;
+
+  margin: 2%;
+  border-radius: 5%;
+}

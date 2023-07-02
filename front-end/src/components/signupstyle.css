@@ -1,0 +1,23 @@
+.big-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background-color: #4A55A2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  
+  .big-button:hover {
+    background-color: #3367d6;
+    transform: scale(1.1);
+  }
+  
+  .signh1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: auto;
+    color: gray;
+  }

@@ -9,6 +9,8 @@ import Products from './components/Pages/Products';
 import SignUp from './components/Pages/SignUp';
 import VolunteerForm from './components/Pages/VolunteerForm';
 import Mentee from './components/Pages/Mentee';
+import Login from './components/Pages/Login';
+import DataList from './components/Pages/volunteer';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path='/sign-up' element={<SignUp/>} />
           <Route exact path='/volunteer-form' element={<VolunteerForm/>} />
           <Route exact path='/mentee' element={<Mentee/>} />
+          <Route exact path='/login' element={<Login/>} />
+          <Route exact path='/volunteer' element={<DataList/>} />
         </Routes>
       </Router>
     </>
