@@ -102,6 +102,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const tableStyle = {
+  width: '100%',
+  borderCollapse: 'collapse',
+};
+
+const thStyle = {
+  backgroundColor: '#f2f2f2',
+  padding: '10px',
+  textAlign: 'left',
+  borderBottom: '1px solid #ddd',
+};
+
+const tdStyle = {
+  padding: '10px',
+  textAlign: 'left',
+  borderBottom: '1px solid #ddd',
+};
+
+const trHoverStyle = {
+  backgroundColor: '#f5f5f5',
+};
+
 const DataList = () => {
   const [data, setData] = useState([]);
 
@@ -109,9 +131,9 @@ const DataList = () => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
+  const fetchData = async() => {
     try {
-      const response = await axios.get('localhost:5000/volunteer/id/64a09848c0f3c9949820f887'); // Replace with your backend API endpoint
+      const response = await axios.get('http://localhost:5000/volunteer/id/64a09848c0f3c9949820f887'); // Replace with your backend API endpoint
       setData(response.data);
       console.log(response.data); // Log the data to the console
     } catch (error) {
@@ -121,25 +143,40 @@ const DataList = () => {
 
   return (
     <div>
-      <h1>Data List</h1>
-      <table>
+      <h1>Volunteer data</h1>
+      {/* <table>
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
+            <th>PhoneNo</th>
+            <th>educational_qualification</th>
           </tr>
         </thead>
         <tbody>
-          {data.map(item => (
-            <tr key={item._id}>
-              <td>{item._id}</td>
-              <td>{item.name}</td>
-              <td>{item.age}</td>
+            <tr key={data._id}>
+              <td >{data._id}</td>
+              <td>{data.phoneNo}</td>
+              <td>{data.educational_qualification}</td>
             </tr>
-          ))}
         </tbody>
-      </table>
+      </table> */}
+      <div style={{ marginTop: '20px' }}></div>
+      <table style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle}>ID</th>
+              <th style={thStyle}>PhoneNo</th>
+              <th style={thStyle}>Educational Qualification</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr key={data._id} style={trHoverStyle}>
+                <td style={tdStyle}>{data._id}</td>
+                <td style={tdStyle}>{data.phoneNo}</td>
+                <td style={tdStyle}>{data.educational_qualification}</td>
+              </tr>
+          </tbody>
+        </table>
     </div>
   );
 };
