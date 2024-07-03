@@ -11,3 +11,4 @@
 <img width="1280" alt="Screenshot 2023-07-31 at 11 04 29 PM" src="https://github.com/cfgblr2023/Team-12/assets/95167495/581d429f-eefb-4968-b933-5dba6df2220d">
 <img width="1280" alt="Screenshot 2023-07-31 at 11 04 43 PM" src="https://github.com/cfgblr2023/Team-12/assets/95167495/642fddf5-8e3b-458f-8db1-3809e868bc17">
 
+ <br /> <br /> The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC"). JPMC did not create or contribute to the development of the Code. This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code, including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
